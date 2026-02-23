@@ -1,0 +1,497 @@
+[00:00:01.055] Server  LOG     ✓ Ready in 689ms
+[00:00:01.664] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.899] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:00:01.921] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/hoodie.jpg" "received" null
+[00:00:02.020] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:02.107] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:00:02.111] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/hoodie.jpg" "received" null
+[00:00:11.498] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/hoodie.jpg" "received" null
+[00:00:17.218] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/hoodie.jpg" "received" null
+[00:00:19.661] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/hoodie.jpg" "received" null
+[00:01:14.739] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:14.740] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:01:14.750] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/hoodie.jpg" "received" null
+[00:01:28.775] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/hoodie.jpg" "received" null
+[00:01:31.108] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/hoodie.jpg" "received" null
+[00:01:51.440] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/bl.jpg" "received" null
+[00:01:51.461] Server  LOG     ✓ Compiled in 13ms
+[00:01:53.122] Server  LOG     ✓ Compiled in 4ms
+[00:02:08.667] Server  LOG     ✓ Compiled in 4ms
+[00:02:11.457] Server  LOG     ✓ Compiled in 3ms
+[00:02:12.531] Server  LOG     ✓ Compiled in 4ms
+[00:09:21.479] Server  LOG     ✓ Compiled in 14ms
+[00:09:21.585] Browser ERROR   ./src/app/page.tsx:8:10
+Parsing ecmascript source code failed
+   6 |
+   7 |  id: "4",
+>  8 |     title: "Creator IT Pen",
+     |          ^
+   9 |     description: "Кольорова ручка з логотипом",
+  10 |     price: 150,
+  11 |     image: "/images/pen.png",
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:09:22.234] Browser ERROR   ./src/app/page.tsx:8:10
+Parsing ecmascript source code failed
+   6 |
+   7 |  id: "4",
+>  8 |     title: "Creator IT Pen",
+     |          ^
+   9 |     description: "Кольорова ручка з логотипом",
+  10 |     price: 150,
+  11 |     image: "/images/pen.png",
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:09:24.441] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:09:24.450] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:24.511] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:24.572] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:09:24.606] Browser WARN    Image with src "/images/blouse.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:09:32.649] Server  LOG     ✓ Compiled in 6ms
+[00:09:32.757] Browser ERROR   ./src/app/page.tsx:16:34
+Parsing ecmascript source code failed
+  14 | //   },
+  15 | const productList = [
+> 16 |     { id: "1", title: "худі",, price: 700, image: "/images/blouse.jpg" },
+     |                                  ^
+  17 |     { id: "2", title: "ручка", price: 350, image: "/images/handle.jpg" },
+  18 |     { id: "3", title: "горнятко", price: 120, image: "/images/cup.jpg" },
+  19 |     { id: "4", title: "зошит", price: 250, image: "/images/notebook.jpg" },
+
+Unexpected token `,`. Expected identifier, string literal, numeric literal or [ for the computed key
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:09:33.237] Browser ERROR   ./src/app/page.tsx:16:34
+Parsing ecmascript source code failed
+  14 | //   },
+  15 | const productList = [
+> 16 |     { id: "1", title: "худі",, price: 700, image: "/images/blouse.jpg" },
+     |                                  ^
+  17 |     { id: "2", title: "ручка", price: 350, image: "/images/handle.jpg" },
+  18 |     { id: "3", title: "горнятко", price: 120, image: "/images/cup.jpg" },
+  19 |     { id: "4", title: "зошит", price: 250, image: "/images/notebook.jpg" },
+
+Unexpected token `,`. Expected identifier, string literal, numeric literal or [ for the computed key
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:09:38.438] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:38.446] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:09:38.525] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:38.547] Browser WARN    Image with src "/images/blouse.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:09:38.587] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:09:39.422] Server  LOG     ✓ Compiled in 4ms
+[00:09:54.260] Server  LOG     ✓ Compiled in 5ms
+[00:09:56.416] Server  LOG     ✓ Compiled in 6ms
+[00:09:59.983] Server  LOG     ✓ Compiled in 3ms
+[00:10:02.130] Server  LOG     ✓ Compiled in 4ms
+[00:10:04.891] Server  LOG     ✓ Compiled in 5ms
+[00:12:03.356] Browser WARN    Image with src "/images/blouse.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:12:41.976] Server  LOG     ✓ Compiled in 5ms
+[00:12:42.064] Browser ERROR   {"message":"Failed to construct 'URL': Invalid URL"}
+[00:12:42.064] Browser ERROR   {"message":"Failed to construct 'URL': Invalid URL"}
+[00:12:42.064] Browser ERROR   uncaughtError: Error: Failed to parse src "pu/images/basket.jpg" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:12:42.237] Browser ERROR   {"message":"Failed to construct 'URL': Invalid URL"}
+[00:12:42.237] Browser ERROR   {"message":"Failed to construct 'URL': Invalid URL"}
+[00:12:42.237] Browser ERROR   uncaughtError: Error: Failed to parse src "pu/images/basket.jpg" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:12:43.258] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:43.258] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:43.386] Server  ERROR   TypeError: Invalid URL
+[00:12:43.402] Server  ERROR   ⨯ Error: Failed to parse src "public/images/basket.jpg" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:12:43.415] Server  LOG     ✓ Compiled in 5ms
+[00:12:43.416] Browser ERROR   {"message":"Failed to construct 'URL': Invalid URL"}
+[00:12:43.416] Browser ERROR   {"message":"Failed to construct 'URL': Invalid URL"}
+[00:12:43.416] Browser ERROR   uncaughtError: Error: Failed to parse src "public/images/basket.jpg" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:12:43.486] Server  ERROR   TypeError: Invalid URL
+[00:12:43.496] Server  ERROR   ⨯ Error: Failed to parse src "public/images/basket.jpg" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:12:43.655] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:43.709] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:43.827] Browser ERROR   {"message":"Failed to construct 'URL': Invalid URL"}
+[00:12:43.827] Browser ERROR   {"message":"Failed to construct 'URL': Invalid URL"}
+[00:12:43.827] Browser ERROR   uncaughtError: Error: Failed to parse src "public/images/basket.jpg" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:12:44.242] Browser ERROR   {"message":"Failed to construct 'URL': Invalid URL"}
+[00:12:44.242] Browser ERROR   {"message":"Failed to construct 'URL': Invalid URL"}
+[00:12:44.242] Browser ERROR   uncaughtError: Error: Failed to parse src "public/images/basket.jpg" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)
+[00:12:48.745] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:48.745] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:12:48.762] Server  LOG     ✓ Compiled in 4ms
+[00:12:49.024] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:49.043] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/basket.jpg" "received" null
+[00:12:49.074] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:49.110] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/basket.jpg" "received" null
+[00:12:49.187] Browser WARN    Image with src "/images/blouse.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:12:55.793] Server  LOG     ✓ Compiled in 7ms
+[00:12:55.901] Browser ERROR   ./src/app/page.tsx:35:36
+Parsing ecmascript source code failed
+  33 |                 <h1>ТОВАР CREATOR IT ACADEMY</h1>
+  34 |
+> 35 |                 <button><Image src/images/basket.jpg" alt="Basket" width={30} height={30}></Image></button>
+     |                                    ^^^^^^
+  36 |             </header>
+  37 |
+  38 |
+
+Expected '</', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:12:56.231] Browser ERROR   ./src/app/page.tsx:35:36
+Parsing ecmascript source code failed
+  33 |                 <h1>ТОВАР CREATOR IT ACADEMY</h1>
+  34 |
+> 35 |                 <button><Image src/images/basket.jpg" alt="Basket" width={30} height={30}></Image></button>
+     |                                    ^^^^^^
+  36 |             </header>
+  37 |
+  38 |
+
+Expected '</', got 'ident'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:12:56.998] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:12:57.135] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:57.185] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:12:57.270] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:57.317] Browser WARN    Image with src "/images/blouse.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:12:57.317] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:06.788] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/basket.jpg" "received" null
+[00:13:06.823] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/basket.jpg" "received" null
+[00:13:06.843] Server  LOG     ✓ Compiled in 4ms
+[00:13:15.534] Server  LOG     ✓ Compiled in 6ms
+[00:13:15.588] Browser ERROR   uncaughtError: Error: Failed to parse src "//images/basket.jpg" on `next/image`, protocol-relative URL (//) must be changed to an absolute URL (http:// or https://)
+[00:13:16.160] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:13:16.160] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:13:16.160] Browser ERROR   uncaughtError: Error: Failed to parse src "//images/basket.jpg" on `next/image`, protocol-relative URL (//) must be changed to an absolute URL (http:// or https://)
+[00:13:16.274] Server  LOG     ✓ Compiled in 5ms
+[00:13:16.283] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:16.417] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:16.430] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:16.493] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:16.594] Browser WARN    Image with src "/images/blouse.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:13:16.610] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:16.614] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/hoodie.jpg" "received" null
+[00:13:28.496] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:28.505] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:28.617] Browser WARN    Image with src "/images/blouse.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:13:41.313] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:41.313] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:41.448] Browser WARN    Image with src "/images/blouse.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:13:44.759] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:44.763] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:44.880] Browser WARN    Image with src "/images/blouse.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:13:45.391] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:45.392] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:45.547] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:45.547] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:45.695] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:45.738] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:45.851] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:45.856] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:45.886] Browser WARN    Image with src "/images/blouse.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:13:46.072] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:46.116] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:46.233] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:46.464] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:46.468] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:46.615] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:46.617] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:46.785] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:46.790] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:46.946] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:46.953] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:47.143] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:47.147] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.jpg" "received" null
+[00:13:47.278] Browser WARN    Image with src "/images/blouse.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:14:16.643] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.pnh" "received" null
+[00:14:16.645] Server  LOG     ✓ Compiled in 6ms
+[00:14:16.680] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.pnh" "received" null
+[00:14:17.723] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.p" "received" null
+[00:14:17.756] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/basket.p" "received" null
+[00:14:17.770] Server  LOG     ✓ Compiled in 4ms
+[00:14:18.929] Server  LOG     ✓ Compiled in 5ms
+[00:27:33.230] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:33.370] Browser WARN    Image with src "/images/blouse.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:27:37.313] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:37.476] Browser WARN    Image with src "/images/blouse.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:28:59.756] Server  LOG     ✓ Compiled in 6ms
+[00:28:59.818] Browser ERROR   uncaughtError: ReferenceError: productList is not defined
+[00:29:00.235] Browser ERROR   uncaughtError: ReferenceError: productList is not defined
+[00:29:05.116] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:29:05.116] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:29:05.117] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:29:05.117] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:29:05.535] Server  ERROR   ⨯ ReferenceError: impo is not defined
+[00:29:05.546] Server  LOG     ✓ Compiled in 5ms
+[00:29:05.789] Server  ERROR   ⨯ ReferenceError: impo is not defined
+[00:29:05.903] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:06.018] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:06.038] Browser ERROR   uncaughtError: ReferenceError: impo is not defined
+[00:29:06.244] Browser ERROR   uncaughtError: ReferenceError: impo is not defined
+[00:29:06.648] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:29:06.648] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/app/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:29:06.649] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:29:06.649] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:29:06.649] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./src/app/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:29:06.650] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:29:06.781] Server  ERROR   ⨯ ReferenceError: productList is not defined
+[00:29:06.790] Server  LOG     ✓ Compiled in 5ms
+[00:29:06.827] Server  ERROR   ⨯ ReferenceError: productList is not defined
+[00:29:06.949] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:07.019] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:29:07.088] Browser ERROR   uncaughtError: ReferenceError: productList is not defined
+[00:29:07.243] Browser ERROR   uncaughtError: ReferenceError: productList is not defined
+[00:30:01.513] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:30:01.513] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:30:01.659] Server  ERROR   ⨯ ReferenceError: productList is not defined
+[00:30:01.675] Server  LOG     ✓ Compiled in 36ms
+[00:30:01.743] Server  ERROR   ⨯ ReferenceError: productList is not defined
+[00:30:01.886] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:02.024] Browser ERROR   uncaughtError: ReferenceError: productList is not defined
+[00:30:02.030] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:02.230] Browser ERROR   uncaughtError: ReferenceError: productList is not defined
+[00:30:07.259] Server  LOG     ✓ Compiled in 8ms
+[00:30:07.367] Browser ERROR   ./src/app/page.tsx:25:44
+Parsing ecmascript source code failed
+  23 |
+  24 |     const handleNext = () => {
+> 25 |         setCurrentProduct(prev => prev === .length - 1 ? 0 : prev + 1)
+     |                                            ^
+  26 |     }
+  27 |     return (
+  28 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:30:08.234] Browser ERROR   ./src/app/page.tsx:25:44
+Parsing ecmascript source code failed
+  23 |
+  24 |     const handleNext = () => {
+> 25 |         setCurrentProduct(prev => prev === .length - 1 ? 0 : prev + 1)
+     |                                            ^
+  26 |     }
+  27 |     return (
+  28 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:30:08.298] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:30:08.298] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:30:08.421] Server  ERROR   ⨯ ReferenceError: productList is not defined
+[00:30:08.460] Server  ERROR   ⨯ ReferenceError: productList is not defined
+[00:30:08.619] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:08.722] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:08.759] Browser ERROR   uncaughtError: ReferenceError: productList is not defined
+[00:30:09.238] Browser ERROR   uncaughtError: ReferenceError: productList is not defined
+[00:30:20.049] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:30:20.049] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:30:20.232] Server  LOG     ✓ Compiled in 6ms
+[00:30:20.421] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:20.476] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/blouse.png" "received" null
+[00:30:20.562] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:20.632] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/blouse.png" "received" null
+[00:31:09.022] Server  LOG     ✓ Compiled in 319ms
+[00:31:09.244] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:09.428] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/blouse.png" "received" null
+[00:31:09.467] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/blouse.png" "received" null
+[00:31:09.499] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:32:04.228] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/cup.png" "received" null
+[00:32:05.044] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/notebook.png" "received" null
+[00:32:05.673] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/pen.png" "received" null
+[00:32:06.267] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/t-shirt.png" "received" null
+[00:32:06.877] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/blouse.png" "received" null
+[00:32:07.545] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/cup.png" "received" null
+[00:32:14.796] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/blouse.png" "received" null
+[00:32:14.808] Server  LOG     ✓ Compiled in 4ms
+[00:32:16.857] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/notebook.png" "received" null
+[00:32:17.041] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/pen.png" "received" null
+[00:32:17.352] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/t-shirt.png" "received" null
+[00:32:17.585] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/blouse.png" "received" null
+[00:32:38.565] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/cup.png" "received" null
+[00:32:39.105] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/notebook.png" "received" null
+[00:32:39.634] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/pen.png" "received" null
+[00:32:40.143] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/t-shirt.png" "received" null
+[00:32:40.633] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/blouse.png" "received" null
+[00:32:41.081] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/public/images/cup.png" "received" null
+[00:32:45.877] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/cup.png" "received" null
+[00:32:45.890] Server  LOG     ✓ Compiled in 4ms
+[00:32:47.409] Server  LOG     ✓ Compiled in 4ms
+[00:32:47.906] Server  LOG     ✓ Compiled in 7ms
+[00:32:48.011] Browser ERROR   ./src/services/mockData.ts:27:12
+Parsing ecmascript source code failed
+  25 |     description: "Зручний блокнот з логотипом",
+  26 |     price: 200,
+> 27 |     image: /images/notebook.png",
+     |            ^^^^^^^^^^^^^^^^
+  28 |     // category: "Stationery",
+  29 |     stock: 50
+  30 |   },
+
+Unknown regular expression flags.
+
+Import traces:
+  Client Component Browser:
+    ./src/services/mockData.ts [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/services/mockData.ts [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:32:48.011] Browser ERROR   ./src/services/mockData.ts:27:32
+Parsing ecmascript source code failed
+  25 |     description: "Зручний блокнот з логотипом",
+  26 |     price: 200,
+> 27 |     image: /images/notebook.png",
+     |                                ^^
+  28 |     // category: "Stationery",
+  29 |     stock: 50
+  30 |   },
+
+Unterminated string constant
+
+Import traces:
+  Client Component Browser:
+    ./src/services/mockData.ts [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/services/mockData.ts [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:32:48.229] Browser ERROR   ./src/services/mockData.ts:27:12
+Parsing ecmascript source code failed
+  25 |     description: "Зручний блокнот з логотипом",
+  26 |     price: 200,
+> 27 |     image: /images/notebook.png",
+     |            ^^^^^^^^^^^^^^^^
+  28 |     // category: "Stationery",
+  29 |     stock: 50
+  30 |   },
+
+Unknown regular expression flags.
+
+Import traces:
+  Client Component Browser:
+    ./src/services/mockData.ts [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/services/mockData.ts [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:32:48.229] Browser ERROR   ./src/services/mockData.ts:27:32
+Parsing ecmascript source code failed
+  25 |     description: "Зручний блокнот з логотипом",
+  26 |     price: 200,
+> 27 |     image: /images/notebook.png",
+     |                                ^^
+  28 |     // category: "Stationery",
+  29 |     stock: 50
+  30 |   },
+
+Unterminated string constant
+
+Import traces:
+  Client Component Browser:
+    ./src/services/mockData.ts [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/services/mockData.ts [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:32:56.826] Server  LOG     ✓ Compiled in 3ms
+[00:32:58.851] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:32:58.856] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/blouse.png" "received" null
+[00:32:59.750] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/cup.png" "received" null
+[00:32:59.983] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/notebook.png" "received" null
+[00:33:00.273] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/pen.png" "received" null
+[00:33:08.096] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/blouse.jp" "received" null
+[00:33:08.108] Server  LOG     ✓ Compiled in 3ms
+[00:33:09.179] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/blouse.jpgq" "received" null
+[00:33:09.191] Server  LOG     ✓ Compiled in 3ms
+[00:33:10.004] Server  LOG     ✓ Compiled in 3ms
+[00:33:11.996] Server  LOG     ✓ Compiled in 4ms
+[00:33:14.223] Server  LOG     ✓ Compiled in 3ms
+[00:33:15.294] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/pen.jpg" "received" null
+[00:33:15.315] Server  LOG     ✓ Compiled in 5ms
+[00:33:16.319] Server  LOG     ✓ Compiled in 3ms
+[00:33:21.820] Server  ERROR   ⨯ "The requested resource isn't a valid image for" "/images/pen.jpg" "received" null
+[00:33:46.022] Server  LOG     ✓ Compiled in 5ms
