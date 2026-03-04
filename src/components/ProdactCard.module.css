@@ -1,0 +1,89 @@
+.card {
+    border: 2.5px solid #222;
+    border-radius: 28px;
+    padding: 18px 18px 24px 18px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    height: 430px;
+    margin: 0 8px;
+    justify-content: flex-start;
+}
+
+.cardTitle {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+.image {
+    border-radius: 18px;
+    margin-bottom: 18px;
+    background: #fff;
+    border: 3px solid #ff9100;
+    padding: 18px;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+}
+
+.productName {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.3rem;
+    margin: 10px 0 6px 0;
+    text-align: center;
+    padding: 0 2px;
+    min-height: 36px;
+    line-height: 1.2;
+}
+
+.productDescription {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1rem;
+    margin: 0 0 12px 0;
+    text-align: center;
+    padding: 0 2px;
+    min-height: 38px;
+    line-height: 1.2;
+}
+
+.priceRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    margin-bottom: 8px;
+}
+
+.addButton {
+    border: 2.5px solid #222;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    background: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    transition: border-color 0.2s;
+}
+
+.addButton:hover {
+    border-color: #ff9100;
+}
+
+.price {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+    margin-right: 4px;
+    border-bottom: 2px solid #222;
+    padding-bottom: 2px;
+}

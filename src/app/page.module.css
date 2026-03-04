@@ -1,0 +1,537 @@
+/* Product Details Page Styles */
+
+.productDetailsContainer {
+       font-family: 'Permanent Marker', cursive;
+
+}
+
+.productDetailsCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 80px;
+    padding: 56px 80px;
+    border-radius: 36px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 2.5px solid #222;
+    margin: 48px auto;
+    max-width: 1400px;
+    min-height: 480px;
+}
+
+.productDetailsImageWrap {
+    flex: 0 0 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #ff9100;
+    border-radius: 44px;
+    background: #fff;
+    box-shadow: 0 0 0 5px #ff9100 inset;
+    padding: 38px;
+    margin-right: 0;
+    min-height: 320px;
+}
+
+.productDetailsImage {
+    width: 240px;
+    height: 240px;
+    object-fit: contain;
+    border-radius: 24px;
+    background: #fff;
+}
+
+.productDetailsInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 340px;
+    max-width: 520px;
+    flex-grow: 1;
+    justify-content: flex-start;
+    margin-left: 32px;
+}
+
+.productDetailsTitle {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.productDetailsDesc {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1rem;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.productDetailsStock {
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.productDetailsColor {
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.productDetailsBottomRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+
+.addButton {
+    background: #fff;
+    border: 2.5px solid #222;
+    color: #222;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+    font-family: 'Permanent Marker', cursive;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.18s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addButton:hover {
+    background: #fff0f0;
+    border-color: #ff9100;
+    color: #ff9100;
+    transform: scale(1.15);
+}
+
+.price {
+    font-size: 2rem;
+    color: #222;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+    border-bottom: 2px solid #222;
+    padding-bottom: 2px;
+}
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    justify-items: center;
+    align-items: stretch;
+    margin: 32px 0;
+}
+
+.prodactCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2.5px solid #222;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 18px 18px 12px 18px;
+    width: 220px;
+    min-width: 220px;
+    max-width: 240px;
+    gap: 8px;
+    position: relative;
+}
+
+.prodactCardImage {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 18px;
+    border: 2px solid #ff9100;
+    background: #fff;
+    margin-bottom: 8px;
+    box-shadow: 0 0 0 3px #ff9100 inset;
+}
+
+.basketItems {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    justify-items: center;
+    margin: 32px 20px;
+}
+
+.basketItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2.5px solid #222;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 18px 18px 12px 18px;
+    margin: 0;
+    width: 210px;
+    height: 300px;
+
+    min-width: 210px;
+    max-width: 220px;
+    gap: 8px;
+    position: relative;
+}
+
+.basketItemImage {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    border-radius: 18px;
+    border: 2px solid #ff9100;
+    background: #fff;
+    margin-bottom: 8px;
+}
+
+.basketItemTitle {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+
+    /* font-weight: bold; */
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.basketItemDesc {
+    font-family: 'Permanent Marker', cursive;
+
+    font-size: 1rem;
+    color: #222;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.basketItemInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.basketItemPrice {
+    font-size: 1.1rem;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+    border-bottom: 2px solid #222;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Permanent Marker', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: left;
+    margin: 0;
+    display: block;
+}
+
+/* .basketItemQuantity {
+    font-size: 1rem;
+    color: #ff9100;
+    font-weight: bold;
+    margin-bottom: 2px;
+    text-align: center;
+} */
+
+.basketRemoveButton {
+    background: #fff;
+    border: 2px solid #222;
+    color: #222;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+    font-family: 'Permanent Marker', cursive;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.18s;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    margin: 0;
+}
+
+.basketItemBottomRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: auto;
+    width: 100%;
+
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); */
+}
+
+.basketRemoveButton:hover {
+    background: #fff0f0;
+    border-color: #ff9100;
+    color: #ff9100;
+    transform: scale(1.15);
+}
+
+/* ..................................... */
+.homeButton {
+    background: #fff;
+    border: 2.5px solid #000000;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    margin-left: 16px;
+}
+
+/* 
+
+.homeButton:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    border-color: #ff9100; */
+/* } */
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.arrowButton {
+    background: #fff;
+    border: 2.5px solid #222;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    margin: 0 16px;
+    padding: 0;
+
+}
+
+.arrowButton:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    border-color: #ff9100;
+}
+
+.arrowIcon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: contain;
+    display: block;
+}
+
+.container {
+    /* box-sizing: border-box; */
+    font-family: 'Permanent Marker', cursive;
+    /* border: 2px solid #222; */
+    /* border-radius: 18px; */
+    /* background: #fff; */
+    /* padding: 20px; */
+    /* margin: 32px auto; */
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); */
+    /* background: #000; */
+
+
+
+}
+
+.productsGrid {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+    align-items: stretch;
+    margin: 32px 0;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border: 2px solid #222;
+    border-radius: 24px;
+    background: #fff;
+    margin: 24px auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: 90%;
+}
+
+.logo {
+    object-fit: contain;
+    display: block;
+}
+
+.title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 34px;
+}
+
+.basketButton {
+    position: relative;
+    background: #fff;
+    border: 2px solid #222;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+/* .basketButton:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    border-color: #ff9100;
+} */
+
+
+.homeButton,
+.basketButton {
+    transition:
+        transform 0.18s cubic-bezier(.4, 2, .6, 1),
+        box-shadow 0.18s,
+        border-color 0.18s;
+}
+
+
+.homeButton:hover,
+.basketButton:hover {
+    transform: scale(1.18) rotate(2deg);
+    box-shadow: 0 4px 18px rgba(255, 145, 0, 0.18);
+    border-color: #ff9100;
+    background: #fff0f0;
+}
+
+
+.basketCount {
+    position: absolute;
+    right: -8px;
+    bottom: -8px;
+    background: #ff9100;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    font-family: 'Permanent Marker', cursive;
+    color: #000;
+}
+
+
+.basketFooter {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: end;
+    padding: 20px 40px;
+}
+
+.basketTotal {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+    border: 2px solid #222;
+    border-radius: 8px;
+    padding: 0.1rem 1.2rem;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: #222;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+}
+
+.basketPayButton {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+    background: #ff9100;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    margin: 0 0 0 1.4rem;
+    transition:
+        background 0.3s,
+        transform 0.15s,
+        box-shadow 0.2s;
+}
+
+.basketPayButton:hover {
+    background: #ffa733;
+    transform: scale(1.07) rotate(-1deg);
+    box-shadow: 0 6px 24px rgba(255, 145, 0, 0.18);
+}
+
+.basketPayButton:active {
+    transform: scale(0.97);
+}
+
+.basketPayButton::after {
+    content: '';
+    position: absolute;
+    left: -75%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: transparent;
+    transform: skewX(-20deg);
+    transition: left 0.5s;
+    pointer-events: none;
+}
+
+.basketPayButton:hover::after {
+    left: 40%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.emptyBasket {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+    color: #000000;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 200px;
+}
+
+.by {
+    color: #ff9100
+}
