@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/TelegramAuth.module.css"],"sourcesContent":[".authContainer {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  gap: 15px;\r\n  padding: 15px;\r\n  margin: 20px auto;\r\n  max-width: 400px;\r\n}\r\n\r\n.userInfo {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 10px;\r\n  background-color: #f0f0f0;\r\n  padding: 10px 20px;\r\n  border-radius: 8px;\r\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.username {\r\n  font-weight: bold;\r\n  color: #333;\r\n  font-size: 16px;\r\n}\r\n\r\n.logoutButton {\r\n  background-color: #ff4444;\r\n  color: white;\r\n  border: none;\r\n  padding: 8px 16px;\r\n  border-radius: 5px;\r\n  cursor: pointer;\r\n  font-size: 14px;\r\n  font-weight: 500;\r\n  transition: background-color 0.2s;\r\n}\r\n\r\n.logoutButton:hover {\r\n  background-color: #cc0000;\r\n}\r\n"],"names":[],"mappings":"AAAA;;;;;;;;;;AAUA;;;;;;;;;;AAUA;;;;;;AAMA;;;;;;;;;;;;AAYA"}}]
-}

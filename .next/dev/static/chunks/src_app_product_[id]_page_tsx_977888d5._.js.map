@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/courses/creatorStoreClient/src/app/product/%5Bid%5D/page.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport Image from \"next/image\";\r\nimport { useState } from \"react\";\r\n\r\n\r\n"],"names":[],"mappings":";AAAA"}}]
-}
