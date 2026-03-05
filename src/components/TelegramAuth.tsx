@@ -30,7 +30,7 @@ export function TelegramAuth() {
 
       try {
         // Відправляємо дані на бекенд
-        const response = await fetch('https://creator-store-server.onrender.com/api/telegram/auth', {
+        const response = await fetch('https://creator-store-server.onrender.com/telegram/auth', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -49,29 +49,17 @@ export function TelegramAuth() {
             
             setIsAuthenticated(true);
             setUsername(user.first_name || user.username || 'Користувач');
-            alert('✅ Успішно авторизовано!');
+            alert('✅ Успішно авторизовано через Telegram!');
+          } else {
+            alert('❌ Помилка: токен не отримано від сервера');
           }
-        } else if (response.status === 404) {
-          // Endpoint ще не реалізований - працюємо локально
-          console.warn('Telegram auth endpoint not ready, using local mode');
-          localStorage.setItem('username', user.first_name || user.username || 'Користувач');
-          localStorage.setItem('telegram_user', JSON.stringify(user));
-          
-          setIsAuthenticated(true);
-          setUsername(user.first_name || user.username || 'Користувач');
-          alert('✅ Авторизовано через Telegram (локальний режим)');
         } else {
-          alert('❌ Помилка авторизації на сервері');
+          const data = await response.json().catch(() => ({}));
+          alert('❌ Помилка авторизації: ' + (data.message || response.status));
         }
       } catch (error) {
-        // Якщо помилка мережі - працюємо локально
-        console.warn('Network error, using local auth:', error);
-        localStorage.setItem('username', user.first_name || user.username || 'Користувач');
-        localStorage.setItem('telegram_user', JSON.stringify(user));
-        
-        setIsAuthenticated(true);
-        setUsername(user.first_name || user.username || 'Користувач');
-        alert('✅ Авторизовано через Telegram (локальний режим)');
+        console.error('Помилка авторизації:', error);
+        alert('❌ Не вдалося з\'єднатися з сервером');
       } finally {
         setLoading(false);
       }

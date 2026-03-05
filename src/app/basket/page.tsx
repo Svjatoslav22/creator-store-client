@@ -12,10 +12,9 @@ const BasketPage = () => {
   const sendOrder = async () => {
     // Перевірка авторизації
     const token = localStorage.getItem("token");
-    const telegramUser = localStorage.getItem("telegram_user");
     
-    if (!token && !telegramUser) {
-      alert('❌ Будь ласка, увійдіть через Telegram');
+    if (!token) {
+      alert('❌ Будь ласка, увійдіть через Telegram для оформлення замовлення');
       return;
     }
 
@@ -26,41 +25,30 @@ const BasketPage = () => {
         price: item.price,
         quantity: item.quantity || 1
       })),
-      // Додаємо дані користувача якщо є
-      user: telegramUser ? JSON.parse(telegramUser) : null,
     }
+    
     try {
-      const headers: any = {
-        "Content-Type": "application/json",
-      };
-      
-      // Додаємо Authorization якщо є token
-      if (token) {
-        headers["Authorization"] = `Bearer ${token}`;
-      }
-      
       const res = await fetch("https://creator-store-server.onrender.com/api/orders", {
         method: "POST",
-        headers: headers,
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`
+        },
         body: JSON.stringify(orderData)
       });
       
-      // Перевірка чи сервер повернув JSON
       if (res.ok) {
         const responseData = await res.json();
         alert("✅ Замовлення успішно оформлено!");
-      } else if (res.status === 404 || res.status === 401) {
-        // Endpoint не готовий або помилка авторизації - показуємо дружнє повідомлення
-        console.warn('Order endpoint not ready or auth issue');
-        alert("⏳ Замовлення прийнято! Максим скоро налаштує сервер для обробки.");
+        // Можна очистити кошик після успішного замовлення
+        // clearCart();
       } else {
-        const responseData = await res.json();
-        alert(`❌ Помилка: ${responseData.message || res.status}`);
+        const responseData = await res.json().catch(() => ({}));
+        alert(`❌ Помилка оформлення: ${responseData.message || res.status}`);
       }
     } catch (error) {
-      console.warn('Error sending order:', error);
-      // Якщо endpoint не готовий - показуємо дружнє повідомлення
-      alert("⏳ Замовлення прийнято локально! Після налаштування сервера воно буде оброблене.");
+      console.error('Error sending order:', error);
+      alert("❌ Не вдалося з'єднатися з сервером");
     }
   }
 
