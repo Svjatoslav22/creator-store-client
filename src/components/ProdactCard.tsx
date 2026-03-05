@@ -15,7 +15,6 @@ export function ProdactCard({ data }: ProductProps) {
     const items = useCartStore((state) => state.items);
     const router = useRouter();
 
-    // Знаходимо кількість цього товару в кошику
     const cartItem = items.find((item) => item.id === data.id);
     const quantity = cartItem ? cartItem.quantity : 0;
 

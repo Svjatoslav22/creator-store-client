@@ -19,7 +19,7 @@ const BasketPage = () => {
       })),
     }
     try {
-      const res = await fetch("https://creator-store-server.onrender.com/api/orders", {
+      const res = await fetch("https://creator-store-server.onrender.com/orders", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
