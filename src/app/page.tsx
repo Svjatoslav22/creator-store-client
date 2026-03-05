@@ -22,7 +22,7 @@ export default function Home() {
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), 10000);
                 
-                const res = await fetch("https://creator-store-server.onrender.com/products", {
+                const res = await fetch("https://creator-store-server.onrender.com/api/products", {
                     signal: controller.signal
                 });
                 clearTimeout(timeoutId);
