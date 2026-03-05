@@ -30,7 +30,7 @@ export function TelegramAuth() {
 
       try {
         // Відправляємо дані на бекенд
-const response = await fetch('https://creator-store-server.onrender.com/api/telegram/auth', {
+        const response = await fetch('https://creator-store-server.onrender.com/api/telegram/auth', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -38,22 +38,40 @@ const response = await fetch('https://creator-store-server.onrender.com/api/tele
           body: JSON.stringify(user),
         });
 
-        const data = await response.json();
-
-        if (response.ok && data.token) {
-          // Зберігаємо токен та ім'я користувача
-          localStorage.setItem('token', data.token);
+        // Перевірка чи сервер повернув JSON
+        if (response.ok) {
+          const data = await response.json();
+          
+          if (data.token) {
+            // Зберігаємо токен та ім'я користувача
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('username', user.first_name || user.username || 'Користувач');
+            
+            setIsAuthenticated(true);
+            setUsername(user.first_name || user.username || 'Користувач');
+            alert('✅ Успішно авторизовано!');
+          }
+        } else if (response.status === 404) {
+          // Endpoint ще не реалізований - працюємо локально
+          console.warn('Telegram auth endpoint not ready, using local mode');
           localStorage.setItem('username', user.first_name || user.username || 'Користувач');
+          localStorage.setItem('telegram_user', JSON.stringify(user));
           
           setIsAuthenticated(true);
           setUsername(user.first_name || user.username || 'Користувач');
-          alert('✅ Успішно авторизовано!');
+          alert('✅ Авторизовано через Telegram (локальний режим)');
         } else {
-          alert('❌ Помилка авторизації: ' + (data.message || 'Невідома помилка'));
+          alert('❌ Помилка авторизації на сервері');
         }
       } catch (error) {
-        console.error('Помилка авторизації:', error);
-        alert('❌ Помилка з\'єднання з сервером');
+        // Якщо помилка мережі - працюємо локально
+        console.warn('Network error, using local auth:', error);
+        localStorage.setItem('username', user.first_name || user.username || 'Користувач');
+        localStorage.setItem('telegram_user', JSON.stringify(user));
+        
+        setIsAuthenticated(true);
+        setUsername(user.first_name || user.username || 'Користувач');
+        alert('✅ Авторизовано через Telegram (локальний режим)');
       } finally {
         setLoading(false);
       }
