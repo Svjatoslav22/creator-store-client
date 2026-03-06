@@ -29,15 +29,19 @@ export function TelegramAuth() {
       setLoading(true);
 
       try {
-        // Підготовка даних - всі поля обов'язкові для бекенду
-        const authData = {
+        // Відправляємо ВСІ дані що прийшли від Telegram (включно з photo_url)
+        // Бо hash був згенерований на основі всіх цих полів
+        const authData: any = {
           id: user.id,
-          username: user.username || "",
-          first_name: user.first_name || "",
-          last_name: user.last_name || "",
+          first_name: user.first_name,
           auth_date: user.auth_date,
           hash: user.hash
         };
+        
+        // Додаємо опціональні поля ТІЛЬКИ якщо вони є
+        if (user.last_name) authData.last_name = user.last_name;
+        if (user.username) authData.username = user.username;
+        if (user.photo_url) authData.photo_url = user.photo_url;
         
         console.log('Sending to server:', JSON.stringify(authData, null, 2));
 
