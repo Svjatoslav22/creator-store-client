@@ -27,6 +27,8 @@ const BasketPage = () => {
       })),
     }
     
+    console.log('Sending order:', orderData);
+    
     try {
       const res = await fetch("https://creator-store-server.onrender.com/api/orders", {
         method: "POST",
@@ -43,10 +45,13 @@ const BasketPage = () => {
         // Можна очистити кошик після успішного замовлення
         // clearCart();
       } else {
-        const responseData = await res.json().catch(() => ({}));
-        alert(`❌ Помилка оформлення: ${responseData.message || res.status}`);
+        const errorData = await res.json().catch(() => ({}));
+        console.error('Order error:', errorData);
+        alert(`❌ Помилка: ${errorData.message || 'Невідома помилка'}`);
       }
-    } catch (error) {
+       
+      }
+     catch (error) {
       console.error('Error sending order:', error);
       alert("❌ Не вдалося з'єднатися з сервером");
     }
