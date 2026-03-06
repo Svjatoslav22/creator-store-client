@@ -30,8 +30,8 @@ export function TelegramAuth() {
       setLoading(true);
 
       try {
-        // Відправляємо дані на бекенд (всі routes через /api/)
-        const response = await fetch('https://creator-store-server.onrender.com/api/telegram/auth', {
+        // Відправляємо дані на бекенд
+        const response = await fetch('https://creator-store-server.onrender.com/api/auth', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
