@@ -26,17 +26,28 @@ export function TelegramAuth() {
     // Глобальна функція для обробки Telegram callback
     window.onTelegramAuth = async (user) => {
       console.log('Telegram user:', user);
-      console.log('Sending to server:', JSON.stringify(user, null, 2));
       setLoading(true);
 
       try {
+        // Підготовка даних - всі поля обов'язкові для бекенду
+        const authData = {
+          id: user.id,
+          username: user.username || "",
+          first_name: user.first_name || "",
+          last_name: user.last_name || "",
+          auth_date: user.auth_date,
+          hash: user.hash
+        };
+        
+        console.log('Sending to server:', JSON.stringify(authData, null, 2));
+
         // Відправляємо дані на бекенд
         const response = await fetch('https://creator-store-server.onrender.com/api/auth', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(user),
+          body: JSON.stringify(authData),
         });
 
         // Перевірка чи сервер повернув JSON
