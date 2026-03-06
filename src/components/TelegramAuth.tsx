@@ -29,14 +29,26 @@ export function TelegramAuth() {
       setLoading(true);
 
       try {
-        // Відправляємо дані на бекенд
-        const response = await fetch('https://creator-store-server.onrender.com/telegram/auth', {
+        // Спочатку пробуємо /api/telegram/auth (як каже Максим)
+        let response = await fetch('https://creator-store-server.onrender.com/api/telegram/auth', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(user),
         });
+
+        // Якщо 404 - пробуємо /telegram/auth (як в документації)
+        if (response.status === 404) {
+          console.log('Trying /telegram/auth without /api/ prefix...');
+          response = await fetch('https://creator-store-server.onrender.com/telegram/auth', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(user),
+          });
+        }
 
         // Перевірка чи сервер повернув JSON
         if (response.ok) {
