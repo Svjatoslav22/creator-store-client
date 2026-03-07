@@ -92,6 +92,11 @@ export function TelegramAuth() {
       script.async = true;
       telegramRef.current.appendChild(script);
     }
+    
+    // Видаляємо Telegram widget якщо вже авторизований
+    if (isAuthenticated && telegramRef.current) {
+      telegramRef.current.innerHTML = '';
+    }
   }, [isAuthenticated]);
 
   const handleLogout = () => {
@@ -99,7 +104,8 @@ export function TelegramAuth() {
     localStorage.removeItem('username');
     setIsAuthenticated(false);
     setUsername('');
-    alert('Ви вийшли з аккаунту');
+    // Перезавантажуємо сторінку щоб Telegram widget з'явився знову
+    window.location.reload();
   };
 
   if (loading) {
