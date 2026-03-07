@@ -20,13 +20,13 @@ const BasketPage = () => {
 
     const orderData = {
       products: items.map(item => ({
-        productId: item.id,
+        product: item.id,
         quantity: item.quantity || 1
 
       })),
       customerName: localStorage.getItem("username") || "Користувач",
-      email: " test@exmaple.com",
-      adderss: "не вказано"
+      email: "test@example.com",
+      address: "не вказано"
     
     };
 
