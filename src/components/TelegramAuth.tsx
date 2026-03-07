@@ -86,7 +86,7 @@ export function TelegramAuth() {
       const script = document.createElement('script');
       script.src = 'https://telegram.org/js/telegram-widget.js?22';
       script.setAttribute('data-telegram-login', 'Creator_Store_Bot');
-      script.setAttribute('data-size', 'large');
+      script.setAttribute('data-size', 'medium');
       script.setAttribute('data-onauth', 'onTelegramAuth(user)');
       script.setAttribute('data-request-access', 'write');
       script.async = true;
@@ -109,12 +109,10 @@ export function TelegramAuth() {
   if (isAuthenticated) {
     return (
       <div className={styles.authContainer}>
-        <div className={styles.userInfo}>
-          <span className={styles.username}>👤 {username}</span>
-          <button onClick={handleLogout} className={styles.logoutButton}>
-            Вийти
-          </button>
-        </div>
+        <span className={styles.username}>👤 {username}</span>
+        <button onClick={handleLogout} className={styles.logoutButton}>
+          Вийти
+        </button>
       </div>
     );
   }
