@@ -4,6 +4,7 @@ import Link from "next/link"
 import styles from "./Header.module.css"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
+import { TelegramAuth } from "./TelegramAuth"
 
 export const Header = function () {
 
@@ -28,7 +29,7 @@ export const Header = function () {
                 
                 <Link href="/" className={pathname === "/" ? styles.active : ""}>ТОВАРИ</Link>
                 <Link href='/basket' className={pathname === "/basket" ? styles.active : ""}>КОШИК</Link>
-                {username ? <span>{username}</span> : <Link href='/login'>ВХІД</Link>}
+                <TelegramAuth />
 
             </nav>
 
