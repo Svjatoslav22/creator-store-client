@@ -3,7 +3,6 @@
 import Link from "next/link"
 import styles from "./Header.module.css"
 import { usePathname } from "next/navigation"
-import { Span } from "next/dist/trace"
 import { useEffect, useState } from "react"
 
 export const Header = function () {
