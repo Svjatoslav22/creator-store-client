@@ -8,7 +8,7 @@ const BasketPage = () => {
 
 
   const items = useCartStore((state) => state.items);
-
+  const clearCart = useCartStore((state) => state.clearCart);
   const sendOrder = async () => {
     // Перевірка авторизації
     const token = localStorage.getItem("token");
@@ -27,135 +27,85 @@ const BasketPage = () => {
       customerName: localStorage.getItem("username") || "Користувач",
       email: "test@example.com",
       address: "не вказано"
-    
+
     };
 
-      try {
-        const res = await fetch("https://creator-store-server.onrender.com/api/orders", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${token}`
-          },
-          body: JSON.stringify(orderData)
-        });
+    try {
+      const res = await fetch("https://creator-store-server.onrender.com/api/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify(orderData)
+      });
 
-        if(res.ok) {
-          const responseData = await res.json();
-    alert("✅ Замовлення успішно оформлено!");
-    // Можна очистити кошик після успішного замовлення
-    // clearCart();
-  } else {
-    const errorData = await res.json().catch(() => ({}));
-  console.error('Order error:', errorData);
-  alert(`❌ Помилка: ${errorData.message || 'Невідома помилка'}`);
-}
-       
+      if (res.ok) {
+        const responseData = await res.json();
+        alert("✅ Замовлення успішно оформлено!");
+        // Можна очистити кошик після успішного замовлення
+        clearCart();
+      } else {
+        const errorData = await res.json().catch(() => ({}));
+        console.error('Order error:', errorData);
+        alert(`❌ Помилка: ${errorData.message || 'Невідома помилка'}`);
       }
-     catch (error) {
-  console.error('Error sending order:', error);
-  alert("❌ Не вдалося з'єднатися з сервером");
-}
+
+    }
+    catch (error) {
+      console.error('Error sending order:', error);
+      alert("❌ Не вдалося з'єднатися з сервером");
+    }
   }
 
-const removeFromCart = useCartStore((state) => state.removeFromCart);
-const increaseQuantity = useCartStore((state) => state.increaseQuantity);
-const decreaseQuantity = useCartStore((state) => state.decreaseQuantity);
+  const removeFromCart = useCartStore((state) => state.removeFromCart);
+  const increaseQuantity = useCartStore((state) => state.increaseQuantity);
+  const decreaseQuantity = useCartStore((state) => state.decreaseQuantity);
 
-const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
 
 
-return (
-  <div className={styles.basketContainer}>
-    <header className={styles.header}>
-      <img src="/images/logo.jpg" alt="Logo" width={180} height={90} className={styles.logo} />
-      <h1 className={styles.title}>КОРЗИНА <span className={styles.by}>by</span> CREATOR IT ACADEMY</h1>
-      <a href="/" className={styles.homeButton}>
-        <img src="/images/home.png" alt="Home" width={40} height={40} />
-      </a>
-    </header>
-
-    <TelegramAuth />
-
+  return (
     <div className={styles.basketItems}>
       {items.length === 0 ? (
         <div className={styles.emptyBasket}>Кошик порожній</div>
       ) : (
         items.map((item, index) => (
-          <div key={`${item.id}-${index}`} className={styles.basketItem}>
-            <img src={item.image} alt={item.title} className={styles.basketItemImage} />
-            <div className={styles.basketItemInfo}>
-              <div className={styles.basketItemTitle}>{item.title}</div>
-              <div className={styles.basketItemDesc}>{item.description}</div>
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '10px',
-                marginTop: '10px',
-                marginBottom: '10px'
-              }}>
-                <button
-                  onClick={() => decreaseQuantity(item.id)}
-                  style={{
-                    padding: '5px 12px',
-                    backgroundColor: '#ff4444',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '5px',
-                    cursor: 'pointer',
-                    fontSize: '16px',
-                    fontWeight: 'bold'
-                  }}
-                >
-                  -
-                </button>
-                <span style={{
-                  fontSize: '18px',
-                  fontWeight: 'bold',
-                  minWidth: '40px',
-                  textAlign: 'center'
-                }}>
-                  {item.quantity}
-                </span>
-                <button
-                  onClick={() => increaseQuantity(item.id)}
-                  style={{
-                    padding: '5px 12px',
-                    backgroundColor: '#4CAF50',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '5px',
-                    cursor: 'pointer',
-                    fontSize: '16px',
-                    fontWeight: 'bold'
-                  }}
-                >
-                  +
-                </button>
-                <span style={{
-                  fontSize: '14px',
-                  color: '#888',
-                  marginLeft: '10px'
-                }}>
-                  {item.price}$ × {item.quantity} = {item.price * item.quantity}$
-                </span>
-              </div>
-              <div className={styles.basketItemBottomRow}>
-                <button className={styles.basketRemoveButton} onClick={() => removeFromCart(item.id)}>X</button>
-                <span className={styles.basketItemPrice}>{item.price * item.quantity}$</span>
+          <div key={`${item.id}-${index}`} className={styles.basketRow}>
+
+            {/* Ліва частина: фото + назва */}
+            <div className={styles.basketRowItem}>
+              <img src={item.image} alt={item.title} className={styles.basketItemImage} />
+              <div>
+                <div className={styles.basketItemTitle}>{item.title}</div>
+                <div className={styles.basketItemDesc}>{item.description}</div>
               </div>
             </div>
+
+            {/* Кількість */}
+            <div className={styles.basketRowQty}>
+              <button onClick={() => decreaseQuantity(item.id)}>—</button>
+              <span>{item.quantity}</span>
+              <button onClick={() => increaseQuantity(item.id)}>+</button>
+            </div>
+
+            {/* Ціна */}
+            <div className={styles.basketRowPrice}>{item.price}$</div>
+
+            {/* Сума */}
+            <div className={styles.basketRowSubtotal}>{item.price * item.quantity}$</div>
+
           </div>
         ))
       )}
+      <div className={styles.basketFooter}>
+        <span className={styles.basketTotal}>Загальна сума: {total}$</span>
+        <button className={styles.basketPayButton} onClick={sendOrder}>ОФОРМИТИ ЗАМОВЛЕННЯ</button>
+
+      </div>
     </div>
-    <footer className={styles.basketFooter}>
-      <div className={styles.basketTotal}>Загальна сума : {total} $</div>
-      <button className={styles.basketPayButton} onClick={sendOrder}>Оплатити</button>
-    </footer>
-  </div>
-);
+  );
 };
 
 export default BasketPage;

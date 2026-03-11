@@ -40,20 +40,22 @@ export function ProdactCard({ data }: ProductProps) {
             <div className={styles.productName}>{data.title}</div>
             <div className={styles.productDescription}>{data.description}</div>
             {quantity > 0 && (
-                <div style={{ 
-                    color: '#4CAF50', 
-                    fontSize: '14px', 
-                    fontWeight: 'bold',
+                <div style={{
+                    color: '#c9a84c',
+                    fontSize: '14px',
+                    // fontWeight: 'bold',
                     marginTop: '5px',
                     textAlign: 'center'
                 }}>
                     У кошику: {quantity} шт.
                 </div>
             )}
+            <span className={styles.price}>{data.price}$</span>
             <div className={styles.priceRow}>
-                <button className={styles.addButton} onClick={handleAddToCart}>+</button>
-                <span className={styles.price}>{data.price}$</span>
+                <button className={styles.addButton} onClick={handleAddToCart}>Додати до кошика</button>
+
             </div>
+
         </div>
     );
 }

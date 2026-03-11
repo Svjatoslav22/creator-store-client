@@ -26,16 +26,7 @@ export default function ProductDetails() {
 
   return (
     <div className={styles.productDetailsContainer}>
-      <header className={styles.header}>
-        <Image src="/images/logo.jpg" alt="Logo" width={180} height={90} className={styles.logo}></Image>
-        <h1 className={styles.title}>ТОВАР <span className={styles.by}>by</span> CREATOR IT ACADEMY</h1>
-        <a href="/basket" className={styles.basketLink}>
-          <button className={styles.basketButton}>
-            <Image src="/images/basket.png" alt="Basket" width={40} height={40} className={styles.basketImage}></Image>
-            <span className={styles.basketCount}>{items.reduce((sum, item) => sum + item.quantity, 0)}</span>
-          </button>
-        </a>
-      </header>
+    
       <div className={styles.productDetailsCard}>
         <ProductImageWithBack image={product.image} title={product.title} />
         <div className={styles.productDetailsInfo}>
