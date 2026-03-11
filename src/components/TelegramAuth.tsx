@@ -115,7 +115,7 @@ export function TelegramAuth() {
   if (isAuthenticated) {
     return (
       <div className={styles.authContainer}>
-        <span className={styles.username}>👤 {username}</span>
+        <span className={styles.username}>{username}</span>
         <button onClick={handleLogout} className={styles.logoutButton}>
           Вийти
         </button>
