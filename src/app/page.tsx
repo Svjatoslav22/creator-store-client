@@ -95,7 +95,7 @@ export default function Home() {
         return (
             <div className={styles.container}>
                 <main className={styles.main}>
-                    <div style={{ fontSize: '24px' }}>Завантаження товарів...</div>
+                    <div style={{ fontSize: '24px', color: '#fff' }}>Завантаження товарів...</div>
                 </main>
             </div>
         );
